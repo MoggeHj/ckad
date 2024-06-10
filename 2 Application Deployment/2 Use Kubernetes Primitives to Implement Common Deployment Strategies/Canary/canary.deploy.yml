@@ -3,13 +3,15 @@ kind: Deployment
 metadata:
   name: canary-deployment
 spec:
-  replicas: 1
+  replicas: 2
   selector:
     matchLabels:
+      app: customer-app
       track: canary
   template:
     metadata:
       labels:
+        app: customer-app
         track: canary
     spec:
       containers:

@@ -8,6 +8,7 @@ spec:
   type: LoadBalancer
   selector:
     app: nginx
+  #  role: green   #Specify role to point to green or blue, otherwise it becomes a canary setup where trafic is routed 50/50 to green and blue deployment
     
   ports:
     - port: 80
